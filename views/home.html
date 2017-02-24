@@ -2,18 +2,54 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <link rel="stylesheet" href="../assets/css/semantic.min.css">
+    <title>FindMe!</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-  </body>
+    <div class="ui form">
+        <div class="ui container">
+            <div class="ui center aligned  segment masthead">
+                <h1 class="ui header center aligned">FindMe  <i class="search icon"></i> </h1>
+                <div class="two fields">
+                    <div class="field">
+                        <label class="left aligned">Path</label>
+                        <div class="ui action input">
+                            <input placeholder="Path to search" type="text" id="path">
+                            <label for="file" class="ui button icon" style="border-top-right-radius: 4px; border-bottom-right-radius: 4px;">
+                                <i class="file icon"></i>
+                                Open</label>
+                            <input type="file" id="file" style="display:none">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Expression</label>
+                        <input placeholder="Expression to search" type="text">
+                    </div>
+                </div>
+                <div class="ui">
+                    <div class="ui buttons">
+                        <button class="ui button" id="clean">Clean</button>
+                        <div class="or"></div>
+                        <button class="ui positive button" id="Search">Search</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui relaxed divided list" id="list">
+            </div>
+        </div>
+    </div>
+    <div class="item" id="template" style="display: none">
+        <i class="large file text outline middle aligned icon"></i>
+        <div class="content">
+        <a class="header">{{name}}</a>
+        <div class="description">{{line}}</div>
+        </div>
+    </div>
+ </body>
 
   <script>
     // You can also require other files to run in this process
-    require('./js/home.js')
+    require('../assets/js/home.js')
   </script>
 </html>
