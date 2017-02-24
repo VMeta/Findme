@@ -11,10 +11,31 @@
             <div class="ui center aligned  segment masthead">
                 <h1 class="ui header center aligned">FindMe  <i class="search icon"></i> </h1>
                 <div class="two fields">
+
+
+                <div class="inline field">
+                    <label>Tell me what type of search are you doing?</label>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="typeOfSearch" checked="checked" value="File" id="File">
+                            <label>Type File</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="typeOfSearch" value="Directory" id="Directory">
+                            <label>Type Directory</label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
                     <div class="field">
                         <label class="left aligned">Path</label>
                         <div class="ui action input">
-                            <input placeholder="Path to search" type="text" id="path">
+                            <input placeholder="Path to search" type="text" id="path" disabled>
                             <label for="file" class="ui button icon" style="border-top-right-radius: 4px; border-bottom-right-radius: 4px;">
                                 <i class="file icon"></i>
                                 Open</label>
@@ -23,20 +44,21 @@
                     </div>
                     <div class="field">
                         <label>Expression</label>
-                        <input placeholder="Expression to search" type="text">
+                        <input placeholder="Expression to search" type="text" id="Search">
                     </div>
                 </div>
                 <div class="ui">
                     <div class="ui buttons">
                         <button class="ui button" id="clean">Clean</button>
                         <div class="or"></div>
-                        <button class="ui positive button" id="Search">Search</button>
+                        <button class="ui positive button" id="BtnSearch">Search</button>
                     </div>
                 </div>
             </div>
 
             <div class="ui relaxed divided list" id="list">
             </div>
+            <a class="ui teal tag label" style="float: right;" id="count"></a>
         </div>
     </div>
     <div class="item" id="template" style="display: none">
