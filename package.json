@@ -1,0 +1,28 @@
+{
+  "name": "findme",
+  "version": "1.0.0",
+  "description": "Desktop app built with the framework Electron to find whatever you want with regular expression or normal string.",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VMeta/Findme.git"
+  },
+  "keywords": [
+    "find",
+    "regex",
+    "string",
+    "search"
+  ],
+  "author": "VMeta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VMeta/Findme/issues"
+  },
+  "homepage": "https://github.com/VMeta/Findme#readme",
+  "dependencies": {
+    "electron": "^1.4.15"
+  }
+}
